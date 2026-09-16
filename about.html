@@ -572,5 +572,22 @@ footer.site h4{font-family:var(--serif);color:#fff;font-size:15px;margin-bottom:
 <noscript><style>.reveal,.mask{opacity:1;transform:none;clip-path:none}.zoomin img{transform:none}</style></noscript>
 <!-- Yapi online scheduling -->
 <script>(function () {var url = 'https://yapiapp.io/v2/sched/ap/?guid=e403cfd2-5fab-45c2-bddc-63a23edced58';var style={'pos':'left' };var script = document.createElement("script");script.type = "text/javascript";if (script.readyState) {script.onreadystatechange = function () {if (script.readyState == "loaded" || script.readyState == "complete") {script.onreadystatechange = null;new YAPIScheduler(url,style).initialize();}}} else {script.onload = function () {new YAPIScheduler(url,style).initialize();}}script.src = 'https://yapiapp.io/yapisdk/sched/js/yapisdk.js.php';document.getElementsByTagName("head")[0].appendChild(script)})();</script>
+<!-- Nav booking: open Yapi scheduler, hide floating launcher -->
+<style>#yapischedulerwindow{display:none!important}</style>
+<script>
+(function(){
+  function openYapi(e){
+    var cal=document.getElementById('yapicalendar');
+    if(cal){
+      e.preventDefault();
+      cal.click();
+      var mm=document.getElementById('mm');
+      if(mm)mm.classList.remove('open');
+    }
+  }
+  var btns=document.querySelectorAll('.nav-right .btn, .mm .btn');
+  for(var i=0;i<btns.length;i++){btns[i].addEventListener('click',openYapi);}
+})();
+</script>
 </body>
 </html>
