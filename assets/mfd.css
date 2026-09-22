@@ -377,3 +377,10 @@ html,body{overflow-x:clip}
  .art-grid{grid-template-columns:1fr;gap:40px}
  .bookcard{position:static}
 }
+
+/* ---- stacked section headers + anchor offset ---- */
+.sec-stack{border-top:1.5px solid var(--ink);padding-top:30px;margin-bottom:44px}
+.sec-stack h1{font-family:var(--serif);font-weight:800;font-size:clamp(36px,5vw,60px);letter-spacing:-.025em;line-height:1.02;margin-top:14px}
+.sec-stack h2{font-size:clamp(28px,4.2vw,50px);margin-top:14px}
+.sec-stack .pg-lede{margin-top:14px}
+section[id],div[id]{scroll-margin-top:120px}
