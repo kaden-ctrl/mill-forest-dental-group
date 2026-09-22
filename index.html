@@ -406,6 +406,34 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 html,body{overflow-x:clip}
 .skiplink{position:absolute;left:-9999px;top:0;z-index:200;background:#fff;color:#12242D;font-weight:700;padding:12px 18px;border-radius:0 0 10px 0}
 .skiplink:focus{left:0}
+
+/* ---- article layout v2: photo headers + booking rail ---- */
+.pg-head-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center;border-top:1.5px solid var(--ink);padding-top:34px}
+.pg-lede{font-size:18px;color:#3E5560;max-width:58ch;margin-top:18px}
+.pg-photo{width:clamp(240px,26vw,350px);aspect-ratio:4/4.4;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--paper2)}
+.pg-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.art-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(240px,26vw,350px);gap:64px;align-items:start}
+.art-grid .prose{max-width:76ch;padding-bottom:96px}
+.bookcard{position:sticky;top:110px;background:var(--spruce);border-radius:18px;padding:30px 28px;display:flex;flex-direction:column;gap:14px;margin-bottom:64px}
+.bookcard .script{color:var(--marigold);font-size:24px;line-height:1.1}
+.bookcard h3{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--paper)}
+.bookcard p{font-size:14.5px;color:#C9DFE7;line-height:1.55}
+.bookcard .btn{justify-content:center}
+.bookcard .tel{font-weight:700;color:var(--paper);border-bottom:2px solid var(--marigold);align-self:flex-start;font-size:15.5px}
+@media (max-width:900px){
+ .pg-head-grid{grid-template-columns:1fr;gap:26px}
+ .pg-photo{width:min(70vw,300px)}
+ .art-grid{grid-template-columns:1fr;gap:40px}
+ .bookcard{position:static}
+}
+
+/* ---- stacked section headers + anchor offset ---- */
+.sec-stack{border-top:1.5px solid var(--ink);padding-top:30px;margin-bottom:44px}
+.sec-stack h1{font-family:var(--serif);font-weight:800;font-size:clamp(36px,5vw,60px);letter-spacing:-.025em;line-height:1.02;margin-top:14px}
+.sec-stack h2{font-size:clamp(28px,4.2vw,50px);margin-top:14px}
+.sec-stack .pg-lede{margin-top:14px}
+section[id],div[id]{scroll-margin-top:120px}
+
 </style>
 </head>
 <body>
