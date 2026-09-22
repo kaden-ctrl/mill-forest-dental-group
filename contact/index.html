@@ -507,14 +507,16 @@ section[id],div[id]{scroll-margin-top:120px}
 
 <section class="band paper2" id="request"><div class="wrap">
 <div class="sec-stack reveal"><span class="tag">Appointment request</span><h2>Request a visit</h2><p class="pg-lede">Complete the form and our scheduling coordinator will contact you soon to confirm. For cancellations, rescheduling, or anything urgent, please call the office directly.</p></div>
-<form class="fform reveal" onsubmit="return false" aria-label="Appointment request form">
-<div><label for="f-name">Your name</label><input id="f-name" type="text" placeholder="Jamie Rivera"></div>
-<div><label for="f-phone">Phone</label><input id="f-phone" type="tel" placeholder="(281) 555-0123"></div>
-<div><label for="f-email">Email</label><input id="f-email" type="email" placeholder="jamie@example.com"></div>
-<div><label for="f-time">Preferred time</label><select id="f-time"><option>Mornings</option><option>Afternoons</option><option>Evenings</option><option>Saturdays</option></select></div>
-<div class="full"><label for="f-msg">Anything we should know?</label><textarea id="f-msg" rows="4" placeholder="New patient, checking on a sensitive tooth"></textarea></div>
+<form class="fform reveal" name="appointment-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Appointment request form">
+<input type="hidden" name="form-name" value="appointment-request">
+<p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+<div><label for="f-name">Your name</label><input id="f-name" name="name" type="text" placeholder="Jamie Rivera" required></div>
+<div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="(281) 555-0123" required></div>
+<div><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="jamie@example.com"></div>
+<div><label for="f-time">Preferred time</label><select id="f-time" name="preferred-time"><option>Mornings</option><option>Afternoons</option><option>Evenings</option><option>Saturdays</option></select></div>
+<div class="full"><label for="f-msg">Anything we should know?</label><textarea id="f-msg" name="message" rows="4" placeholder="New patient, checking on a sensitive tooth"></textarea></div>
 <div class="full"><button class="btn btn-solid" type="submit">Send request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
-<p class="pg-note">This mockup form is for design review. On the live site it will submit to the scheduling coordinator.</p></div>
+<p class="pg-note">We answer requests within one business day. For anything urgent, please call the office.</p></div>
 </form>
 </div></section>
 
