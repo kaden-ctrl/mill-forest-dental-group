@@ -172,8 +172,8 @@ section{position:relative}
 .sbi em{color:var(--marigold);font-style:normal}
 
 /* ---- OUR PRACTICE ---- */
-.prac-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:32px;align-items:stretch}
-.prac-photo{border-radius:16px;overflow:hidden;background:var(--paper2);margin:0}
+.prac-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:32px;align-items:start}
+.prac-photo{border-radius:16px;overflow:hidden;background:var(--paper2);margin:0;width:100%;align-self:start}
 .prac-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .prac-photo.main{aspect-ratio:5/4}
 .prac-photo.sm{aspect-ratio:5/4}
@@ -185,7 +185,7 @@ section{position:relative}
 .prac-side .btns{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
 
 /* ---- DOCTORS ---- */
-.docs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:52px 36px}
+.docs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 40px;max-width:760px}
 .doc{text-align:left}
 .doc .ph{border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--paper2);aspect-ratio:4/4.8}
 .doc .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
@@ -443,6 +443,11 @@ html,body{overflow-x:clip}
 .sec-stack .pg-lede{margin-top:14px}
 section[id],div[id]{scroll-margin-top:120px}
 
+
+.doc-link{display:block;text-decoration:none;color:inherit}
+.doc-link h3{transition:color .2s}
+.doc-link:hover h3{color:var(--fern)}
+.doc-link:hover .ph img{transform:scale(1.045)}
 </style>
 </head>
 <body>
@@ -605,23 +610,23 @@ section[id],div[id]{scroll-margin-top:120px}
     </div>
     <div class="docs-grid">
       <div class="doc reveal" data-d="1">
-        <div class="ph zoomin"><img src="/assets/img/meet-jen-l-butler-dds.jpg" alt="Portrait of Jen L. Butler, DDS, FAGD" loading="lazy"></div>
-        <h3>Jen L. Butler, DDS, FAGD</h3>
+        <a class="doc-link" href="/meet-jen-l-butler-dds/"><div class="ph zoomin"><img src="/assets/img/meet-jen-l-butler-dds.jpg" alt="Portrait of Jen L. Butler, DDS, FAGD" loading="lazy"></div>
+        <h3>Jen L. Butler, DDS, FAGD</h3></a>
         <p>Dentist at Mill Forest Dental Group</p>
       </div>
       <div class="doc reveal" data-d="2">
-        <div class="ph zoomin"><img src="/assets/img/meet-jennifer-h-hermstein-dds.jpg" alt="Portrait of Jennifer H. Hermstein, DDS, FAGD" loading="lazy"></div>
-        <h3>Jennifer H. Hermstein, DDS, FAGD</h3>
+        <a class="doc-link" href="/meet-jennifer-h-hermstein-dds/"><div class="ph zoomin"><img src="/assets/img/meet-jennifer-h-hermstein-dds.jpg" alt="Portrait of Jennifer H. Hermstein, DDS, FAGD" loading="lazy"></div>
+        <h3>Jennifer H. Hermstein, DDS, FAGD</h3></a>
         <p>Dentist at Mill Forest Dental Group</p>
       </div>
       <div class="doc reveal">
-        <div class="ph zoomin"><img src="/assets/img/meet-samantha-j-tutt-dds.jpg" alt="Portrait of Samantha J. Tutt, DDS, FAGD" loading="lazy"></div>
-        <h3>Samantha J. Tutt, DDS, FAGD</h3>
+        <a class="doc-link" href="/meet-samantha-j-tutt-dds/"><div class="ph zoomin"><img src="/assets/img/meet-samantha-j-tutt-dds.jpg" alt="Portrait of Samantha J. Tutt, DDS, FAGD" loading="lazy"></div>
+        <h3>Samantha J. Tutt, DDS, FAGD</h3></a>
         <p>Dentist at Mill Forest Dental Group</p>
       </div>
       <div class="doc reveal" data-d="1">
-        <div class="ph zoomin"><img src="/assets/img/meet-andrew-augustine-dds.jpg" alt="Portrait of Andrew Augustine, DDS" loading="lazy"></div>
-        <h3>Andrew Augustine, DDS</h3>
+        <a class="doc-link" href="/meet-andrew-augustine-dds/"><div class="ph zoomin"><img src="/assets/img/meet-andrew-augustine-dds.jpg" alt="Portrait of Andrew Augustine, DDS" loading="lazy"></div>
+        <h3>Andrew Augustine, DDS</h3></a>
         <p>Dentist at Mill Forest Dental Group</p>
       </div>
       
