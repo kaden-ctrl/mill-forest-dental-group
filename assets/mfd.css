@@ -419,3 +419,5 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .pg-head-grid.one-col{grid-template-columns:1fr}
 .pg-banner{margin:30px 0 40px}
 .pg-banner img{width:100%;height:auto;display:block;border-radius:16px}
+
+.form-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
