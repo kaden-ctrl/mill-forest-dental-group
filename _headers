@@ -1,0 +1,8 @@
+/assets/*
+  Cache-Control: public, max-age=604800
+
+/assets/hero-beach.mp4
+  Cache-Control: public, max-age=2592000
+
+/assets/mfd.css
+  Cache-Control: public, max-age=604800
