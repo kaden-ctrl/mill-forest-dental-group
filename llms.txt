@@ -1,0 +1,37 @@
+# Mill Forest Dental Group
+
+> Family and cosmetic dental practice in Webster, Texas, serving the Clear Lake area for more than 30 years. Four dentists, one location, accepting new patients.
+
+## Key facts
+- Address: 17240 Mill Forest Rd, Suite C, Webster, TX 77598
+- Phone: (281) 204-8100
+- Email: Office@millforestdental.com
+- Hours: Monday 8:00am-6:00pm; Tuesday-Thursday 7:00am-6:00pm; Friday 8:00am-5:00pm; Saturday by appointment; Sunday closed
+- Rating: 4.9 stars from 599 Google reviews
+- Areas served: Clear Lake, Webster, League City, Friendswood, Nassau Bay, Seabrook, Dickinson, Houston
+- New patients: welcomed, often seen within the week
+- Emergencies: same-day appointments reserved daily
+- Payment: most major insurance billed directly, Cherry payment plans, CareCredit financing, in-house membership plan for uninsured patients
+
+## Dentists
+- Jen L. Butler, DDS, FAGD
+- Jennifer H. Hermstein, DDS, FAGD
+- Samantha J. Tutt, DDS, FAGD
+- Andrew Augustine, DDS (certified in nitrous sedation)
+
+## Services
+- Preventive: exams and cleanings, fluoride, sealants, nightguards, oral cancer screening
+- General: fillings, crowns, bridges, dentures, extractions, root canals, sedation, pediatric care
+- Cosmetic: teeth whitening, veneers, bonding, clear aligners (SureSmile)
+- Periodontics: gum disease treatment, scaling and root planing, periodontal surgery
+- Technology: digital X-rays, intraoral camera, Trios 3D scanner, CBCT 3D imaging, CariVu, DIAGNOdent
+
+## Pages
+- [Home](https://millforestdental-semi-live.netlify.app/)
+- [Services](https://millforestdental-semi-live.netlify.app/services/)
+- [Our practice and doctors](https://millforestdental-semi-live.netlify.app/about/)
+- [Meet the team](https://millforestdental-semi-live.netlify.app/meet-the-team/)
+- [New patients and financial information](https://millforestdental-semi-live.netlify.app/new-patients/)
+- [Contact and appointment request](https://millforestdental-semi-live.netlify.app/contact/)
+- [Patient forms](https://millforestdental-semi-live.netlify.app/patient-forms/)
+- [Testimonials](https://millforestdental-semi-live.netlify.app/testimonials/)

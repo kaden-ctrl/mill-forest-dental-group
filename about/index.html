@@ -170,12 +170,12 @@ section{position:relative}
 .sbi em{color:var(--marigold);font-style:normal}
 
 /* ---- OUR PRACTICE ---- */
-.prac-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:32px;align-items:start}
+.prac-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:34px;align-items:start}
 .prac-photo{border-radius:16px;overflow:hidden;background:var(--paper2);margin:0;width:100%;align-self:start}
 .prac-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .prac-photo.main{aspect-ratio:5/4}
 .prac-photo.sm{aspect-ratio:5/4}
-.prac-side{display:flex;flex-direction:column;gap:22px}
+.prac-side{display:flex;flex-direction:column;gap:18px}
 .prac-side p{font-size:16.5px;color:#3c4a42;max-width:52ch}
 .prac-stat{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:18px}
 .prac-stat b{font-family:var(--serif);font-weight:800;font-size:46px;line-height:1}
@@ -416,6 +416,7 @@ html,body{overflow-x:clip}
 .sec-stack .pg-lede{margin-top:14px}
 section[id],div[id]{scroll-margin-top:120px}
 
+@media (max-width:1250px){.prac-grid{grid-template-columns:1fr!important}.prac-photo.main{max-width:760px}}
 </style>
 <style>
 .pg-head{padding:64px 0 10px}
@@ -511,6 +512,7 @@ section[id],div[id]{scroll-margin-top:120px}
 </div>
 </section>
 
+<section class="band" id="faq"><div class="wrap"><div class="sec-stack reveal"><span class="tag">Good to know</span><h2>Common questions</h2></div><div class="faq-list reveal" style="max-width:860px"><details class="q" open><summary>How long has Mill Forest Dental Group been in Clear Lake?<span class="pm" aria-hidden="true"></span></summary><div class="a">More than 30 years. Many of our patients have been with us long enough that we have watched their families grow up.</div></details><details class="q"><summary>Which dentist will I see?<span class="pm" aria-hidden="true"></span></summary><div class="a">You can request any of our four dentists, and we will do our best to keep you with the same one each visit. If you are new and have no preference, we will match you with whoever can see you soonest.</div></details></div></div></section>
 <!-- CTA -->
 <section class="band" style="padding-top:20px">
   <div class="wrap">
@@ -623,5 +625,8 @@ section[id],div[id]{scroll-margin-top:120px}
 })();
 </script>
 <noscript><style>.reveal,.mask{opacity:1;transform:none;clip-path:none}.zoomin img{transform:none}</style></noscript>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long has Mill Forest Dental Group been in Clear Lake?", "acceptedAnswer": {"@type": "Answer", "text": "More than 30 years. Many of our patients have been with us long enough that we have watched their families grow up."}}, {"@type": "Question", "name": "Which dentist will I see?", "acceptedAnswer": {"@type": "Answer", "text": "You can request any of our four dentists, and we will do our best to keep you with the same one each visit. If you are new and have no preference, we will match you with whoever can see you soonest."}}]}
+</script>
 </body>
 </html>

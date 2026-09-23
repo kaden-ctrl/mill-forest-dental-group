@@ -140,12 +140,12 @@ section{position:relative}
 .sbi em{color:var(--marigold);font-style:normal}
 
 /* ---- OUR PRACTICE ---- */
-.prac-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:32px;align-items:start}
+.prac-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:34px;align-items:start}
 .prac-photo{border-radius:16px;overflow:hidden;background:var(--paper2);margin:0;width:100%;align-self:start}
 .prac-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .prac-photo.main{aspect-ratio:5/4}
 .prac-photo.sm{aspect-ratio:5/4}
-.prac-side{display:flex;flex-direction:column;gap:22px}
+.prac-side{display:flex;flex-direction:column;gap:18px}
 .prac-side p{font-size:16.5px;color:#3c4a42;max-width:52ch}
 .prac-stat{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:18px}
 .prac-stat b{font-family:var(--serif);font-weight:800;font-size:46px;line-height:1}
@@ -421,3 +421,7 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .pg-banner img{width:100%;height:auto;display:block;border-radius:16px}
 
 .form-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+
+/* ---- faq section on article pages ---- */
+.prose h2#faq{margin-top:52px}
+@media (max-width:1250px){.prac-grid{grid-template-columns:1fr!important}.prac-photo.main{max-width:760px}}
