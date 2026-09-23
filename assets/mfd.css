@@ -79,7 +79,7 @@ header.nav.on .brand-logo{height:46px}
 .mast .lead-col .kicker{display:block;margin-bottom:22px}
 .mast h2{font-size:clamp(32px,4.8vw,58px)}
 .mast .desc{font-size:17.5px;color:var(--muted);max-width:44ch;padding-bottom:8px}
-.mast .tag{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--fern);display:block;margin-bottom:22px}
+.tag{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--fern);display:block;margin-bottom:18px;letter-spacing:.01em}
 
 section{position:relative}
 .band{padding:104px 0}
@@ -132,7 +132,7 @@ section{position:relative}
 
 /* ---- stat band (inline ruled) ---- */
 .statband{background:var(--spruce);color:var(--paper)}
-.statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:56px 32px}
+.statband .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding:56px 32px}
 .sbi{padding:6px 34px;border-left:1px solid var(--paper-line)}
 .sbi:first-child{border-left:none;padding-left:0}
 .sbi b{font-family:var(--serif);font-weight:800;font-size:clamp(40px,5vw,60px);line-height:1;display:block;letter-spacing:-.02em}
