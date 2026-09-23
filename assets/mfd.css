@@ -388,3 +388,26 @@ section[id],div[id]{scroll-margin-top:120px}
 /* ---- linked chips ---- */
 a.chip{display:inline-block;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
 a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:translateY(-1px)}
+
+/* ---- team grids ---- */
+.tm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:24px 18px;margin-top:22px}
+.tm{margin:0}
+.tm-ph{border-radius:999px 999px 12px 12px;overflow:hidden;background:var(--paper2);aspect-ratio:4/5}
+.tm-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.tm:hover .tm-ph img{transform:scale(1.05)}
+.tm figcaption{margin-top:10px;font-family:var(--serif);font-weight:700;font-size:17px}
+.tg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:22px}
+.tg{margin:0}
+.tg img{width:100%;border-radius:14px;display:block}
+.tg figcaption{margin-top:10px;font-size:14.5px;font-weight:700;color:var(--fern)}
+
+/* ---- team lightbox ---- */
+.tm-btn{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;text-align:left;font:inherit;color:inherit}
+.tm-btn .tm-ph{display:block}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(7,36,47,.92);display:flex;align-items:center;justify-content:center;padding:32px}
+.lb[hidden]{display:none}
+.lb-fig{margin:0;max-width:min(92vw,560px);text-align:center}
+.lb-fig img{width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:16px;display:block}
+.lb-fig figcaption{margin-top:14px;font-family:var(--serif);font-weight:700;font-size:22px;color:var(--paper)}
+.lb-close{position:absolute;top:22px;right:26px;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(251,246,236,.5);background:rgba(7,36,47,.5);color:var(--paper);font-size:30px;line-height:1;cursor:pointer}
+.lb-close:hover{background:rgba(7,36,47,.9)}
