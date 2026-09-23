@@ -432,7 +432,8 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .diagram figcaption{margin-top:10px;font-size:14.5px;color:var(--muted);max-width:62ch}
 
 /* ---- how-to step cards ---- */
-.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:22px 0 10px}
+.steps-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin:22px 0 10px;max-width:620px}
+@media (max-width:560px){.steps-grid{grid-template-columns:1fr;max-width:340px}}
 .step{margin:0}
 .step img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:12px;background:#fff}
 .step figcaption{margin-top:10px;font-size:14.5px;color:#3E5560;line-height:1.5}
