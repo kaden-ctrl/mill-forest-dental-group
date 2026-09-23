@@ -425,3 +425,15 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 /* ---- faq section on article pages ---- */
 .prose h2#faq{margin-top:52px}
 @media (max-width:1250px){.prac-grid{grid-template-columns:1fr!important}.prac-photo.main{max-width:760px}}
+
+/* ---- educational diagrams ---- */
+.diagram{margin:22px 0 8px}
+.diagram img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:14px;background:#fff}
+.diagram figcaption{margin-top:10px;font-size:14.5px;color:var(--muted);max-width:62ch}
+
+/* ---- how-to step cards ---- */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:22px 0 10px}
+.step{margin:0}
+.step img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:12px;background:#fff}
+.step figcaption{margin-top:10px;font-size:14.5px;color:#3E5560;line-height:1.5}
+.step figcaption b{display:block;font-family:var(--serif);font-weight:700;color:var(--fern);font-size:15px;margin-bottom:3px}
