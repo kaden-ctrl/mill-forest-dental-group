@@ -104,7 +104,7 @@ section{position:relative}
 .hero-body{display:block;margin-top:30px}
 .hero-lead p{font-size:20px;color:#3c4a42;max-width:42ch}
 .hero-cta{display:flex;align-items:center;gap:24px;margin-top:36px;flex-wrap:wrap}
-.hero-meta{margin-top:44px;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:36px;flex-wrap:wrap}
+.hero-meta{margin-top:44px;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:36px;flex-wrap:wrap;align-items:flex-end}
 .hmi{display:flex;flex-direction:column;gap:3px}
 .hmi b{font-family:var(--serif);font-weight:800;font-size:30px;line-height:1}
 .hmi span{font-size:13px;color:var(--muted);font-weight:700}
