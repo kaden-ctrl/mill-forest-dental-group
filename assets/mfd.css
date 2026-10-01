@@ -440,8 +440,13 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .step figcaption b{display:block;font-family:var(--serif);font-weight:700;color:var(--fern);font-size:15px;margin-bottom:3px}
 
 /* ---- private practice callout ---- */
-.pp-note{background:var(--spruce);color:var(--paper);border-radius:18px;padding:34px 36px;margin:48px 0 8px;max-width:820px}
+.pp-note{background:var(--spruce);color:var(--paper);border-radius:18px;padding:46px 50px;margin:48px 0 8px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:44px;align-items:start}
+.pp-note .pp-head{min-width:0}
+.pp-note .pp-body{min-width:0}
+.pp-note .pp-body p:first-child{margin-top:0}
+@media (max-width:880px){.pp-note{grid-template-columns:1fr;gap:18px;padding:30px 26px}}
+
 .pp-note .script{color:var(--marigold);font-size:24px;display:block}
 .pp-note h3{font-family:var(--serif);font-weight:800;font-size:clamp(23px,2.6vw,30px);color:var(--paper);margin-top:8px;letter-spacing:-.01em}
-.pp-note p{font-size:16.5px;color:#C9DFE7;margin-top:14px;max-width:62ch}
+.pp-note p{font-size:16.5px;color:#C9DFE7;margin-top:16px;max-width:60ch}
 @media (max-width:620px){.pp-note{padding:26px 24px}}

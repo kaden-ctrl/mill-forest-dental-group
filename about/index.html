@@ -419,10 +419,15 @@ section[id],div[id]{scroll-margin-top:120px}
 @media (max-width:1250px){.prac-grid{grid-template-columns:1fr!important}.prac-photo.main{max-width:760px}}
 
 /* ---- private practice callout ---- */
-.pp-note{background:var(--spruce);color:var(--paper);border-radius:18px;padding:34px 36px;margin:48px 0 8px;max-width:820px}
+.pp-note{background:var(--spruce);color:var(--paper);border-radius:18px;padding:46px 50px;margin:48px 0 8px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:44px;align-items:start}
+.pp-note .pp-head{min-width:0}
+.pp-note .pp-body{min-width:0}
+.pp-note .pp-body p:first-child{margin-top:0}
+@media (max-width:880px){.pp-note{grid-template-columns:1fr;gap:18px;padding:30px 26px}}
+
 .pp-note .script{color:var(--marigold);font-size:24px;display:block}
 .pp-note h3{font-family:var(--serif);font-weight:800;font-size:clamp(23px,2.6vw,30px);color:var(--paper);margin-top:8px;letter-spacing:-.01em}
-.pp-note p{font-size:16.5px;color:#C9DFE7;margin-top:14px;max-width:62ch}
+.pp-note p{font-size:16.5px;color:#C9DFE7;margin-top:16px;max-width:60ch}
 @media (max-width:620px){.pp-note{padding:26px 24px}}
 </style>
 <style>
@@ -499,20 +504,20 @@ section[id],div[id]{scroll-margin-top:120px}
 </div></div>
 </div></section>
 
-<section class="band" style="padding-top:0"><div class="wrap"><aside class="pp-note reveal"><span class="script">Independently owned</span><h3>A private practice, not corporate dentistry</h3><p>Mill Forest Dental Group is independently owned and operated by the dentists who care for you. Decisions about your treatment get made right here, between you and your dentist, never by a corporate owner setting quotas or scripting what we recommend.</p><p>It is why we can block a full hour and a half for a new patient, take the time to explain your options, and tell you honestly when something can wait.</p></aside></div></section>
+<section class="band" style="padding-top:0"><div class="wrap"><aside class="pp-note reveal"><div class="pp-head"><span class="script">Independently owned</span><h3>A private practice, not corporate dentistry</h3></div><div class="pp-body"><p>Mill Forest Dental Group is independently owned and operated by the dentists who care for you. Decisions about your treatment get made right here, between you and your dentist, never by a corporate owner setting quotas or scripting what we recommend.</p><p>It is why we can block a full hour and a half for a new patient, take the time to explain your options, and tell you honestly when something can wait.</p></div></aside></div></section>
 <section class="band paper2" id="doctors"><div class="wrap">
 <div class="sec-stack reveal"><span class="tag">Meet the doctors</span><h2>Four dentists, one friendly team</h2><p class="pg-lede">Every doctor here lives locally, knows their patients by name, and takes the time to get your care right.</p></div>
 <div class="docrow reveal">
 <div class="ph zoomin"><img src="/assets/img/meet-jen-l-butler-dds.jpg" alt="Portrait of Jen L. Butler, DDS, FAGD" loading="lazy"></div>
-<div><h3>Jen L. Butler, DDS, FAGD</h3><div class="cred">Loves seeing families grow up with us</div><p>“I cannot express enough how much I love my career in dentistry. I feel honored that people choose me to take care of their oral health and make their smiles beautiful. After many years of practice, I have seen so many families grow, and grow up!”</p><p>Dr. Butler meets monthly with a study club of general dentists and specialists to review complex cases, and trains yearly through hands-on Spear workshops and the Las Vegas Institute for Advanced Dental Studies. She lives in League City with her husband Dan, an aerospace engineer, and their three boys.</p><ul class="edu"><li>BA in Microbiology, University of Texas at Austin</li><li>DDS, UTHealth Houston School of Dentistry</li><li>Fellow, Academy of General Dentistry</li></ul></div>
+<div><h3>Jen L. Butler, DDS, FAGD</h3><div class="cred">Loves seeing families grow up with us</div><p>&ldquo;I cannot express enough how much I love my career in dentistry. I feel honored that people choose me to take care of their oral health and make their smiles beautiful. After many years of practice, I have seen so many families grow, and grow up!&rdquo;</p><p>Dr. Butler meets monthly with a study club of general dentists and specialists to review complex cases, and trains yearly through hands-on Spear workshops. Born in Houston and raised around Austin, she settled in League City in 2005 with her husband Dan and their three boys.</p><ul class="edu"><li>BA in Microbiology, University of Texas at Austin</li><li>DDS, UTHealth Houston School of Dentistry</li><li>Fellow, Academy of General Dentistry</li></ul></div>
 </div>
 <div class="docrow reveal">
 <div class="ph zoomin"><img src="/assets/img/meet-jennifer-h-hermstein-dds.jpg" alt="Portrait of Jennifer H. Hermstein, DDS, FAGD" loading="lazy"></div>
-<div><h3>Jennifer H. Hermstein, DDS, FAGD</h3><div class="cred">Your neighbor at the store and the soccer game</div><p>“I love that our patients share their lives with us. Living in the same community where I practice, I see my patients at the store or at soccer games, and that really makes a difference in building trusting relationships.”</p><p>Dr. Hermstein is working toward Mastership in the Academy of General Dentistry, which requires more than double the annual continuing education of any other affiliation. A San Antonio native, she has lived in League City since 2002 with her husband Scott and their three sons.</p><ul class="edu"><li>BA, University of Texas at Austin</li><li>DDS, UT Health Science Center at San Antonio</li><li>Fellow, Academy of General Dentistry</li></ul></div>
+<div><h3>Jennifer H. Hermstein, DDS, FAGD</h3><div class="cred">Your neighbor at the store and the soccer game</div><p>&ldquo;I love that our patients share their lives with us. One of my favorite things is hearing our younger patients ask when they can come back!&rdquo;</p><p>Dr. Hermstein is committed to providing thoughtful, personalized care and continually growing as a dentist. She is working toward Mastership in the Academy of General Dentistry (AGD), a distinction that requires extensive continuing education. A San Antonio native, she has called League City home since 2002.</p><ul class="edu"><li>BA, University of Texas at Austin</li><li>DDS, UT Health Science Center at San Antonio</li><li>Fellow, Academy of General Dentistry</li></ul></div>
 </div>
 <div class="docrow reveal">
 <div class="ph zoomin"><img src="/assets/img/meet-samantha-j-tutt-dds.jpg" alt="Portrait of Samantha J. Tutt, DDS, FAGD" loading="lazy"></div>
-<div><h3>Samantha J. Tutt, DDS, FAGD</h3><div class="cred">Grew up in a dental family</div><p>“Having grown up with a pediatric dentist for a mother, dentistry seemed like a perfect fit, and it has been. No two patients are alike, and I love the uniqueness each one brings to our office.”</p><p>Dr. Tutt is pursuing her Fellowship with the Academy of General Dentistry and volunteers dental care through Give Kids a Smile Day, Lighthouse Ministries, and Texas Mission of Mercy. She and her husband live in La Porte, where they are raising two daughters, because they both love the Gulf Coast.</p><ul class="edu"><li>BS in Biology, University of Houston</li><li>DDS, UTHealth Houston School of Dentistry</li><li>Member, ADA, TDA, and Greater Houston Dental Society</li></ul></div>
+<div><h3>Samantha J. Tutt, DDS, FAGD</h3><div class="cred">Grew up in a dental family</div><p>&ldquo;Having grown up with a pediatric dentist for a mother, dentistry always felt like a natural fit, and it has been! I love caring for my patients and helping them feel comfortable at the dentist.&rdquo;</p><p>Dr. Tutt has achieved a Fellowship with the Academy of General Dentistry, reflecting a lifelong commitment to advanced education, modern technology, and evidence-based care. She and her husband are both natives of La Porte, TX where they live and raise their two daughters.</p><ul class="edu"><li>BS in Biology, University of Houston</li><li>DDS, UTHealth Houston School of Dentistry</li><li>Member, ADA, TDA, and Greater Houston Dental Society</li></ul></div>
 </div>
 <div class="docrow reveal">
 <div class="ph zoomin"><img src="/assets/img/meet-andrew-augustine-dds.jpg" alt="Portrait of Andrew Augustine, DDS" loading="lazy"></div>
