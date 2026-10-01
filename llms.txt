@@ -24,7 +24,7 @@
 - General: fillings, crowns, bridges, dentures, extractions, root canals, sedation, pediatric care
 - Cosmetic: teeth whitening, veneers, bonding, clear aligners (SureSmile)
 - Periodontics: gum disease treatment, scaling and root planing, periodontal surgery
-- Technology: digital X-rays, intraoral camera, Trios 3D scanner, CBCT 3D imaging, CariVu, DIAGNOdent
+- Technology: digital X-rays, intraoral camera, Trios 3D scanner, CBCT 3D imaging, dental laser, DIAGNOdent
 
 ## Pages
 - [Home](https://millforestdental-semi-live.netlify.app/)
