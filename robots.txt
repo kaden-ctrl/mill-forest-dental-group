@@ -28,4 +28,4 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://millforestdental-semi-live.netlify.app/sitemap.xml
+Sitemap: https://millforestdental.netlify.app/sitemap.xml

@@ -28,11 +28,11 @@
 - Laser dentistry: Laser Bacterial Reduction (LBR) and Laser-Assisted Periodontal Therapy (LAPT) for gum health, soft tissue laser treatment for cold sores and canker sores, laser desensitization for sensitive teeth, photobiomodulation (PBM) therapy for healing, TMJ and jaw pain
 
 ## Pages
-- [Home](https://millforestdental-semi-live.netlify.app/)
-- [Services](https://millforestdental-semi-live.netlify.app/services/)
-- [Our practice and doctors](https://millforestdental-semi-live.netlify.app/about/)
-- [Meet the team](https://millforestdental-semi-live.netlify.app/meet-the-team/)
-- [New patients and financial information](https://millforestdental-semi-live.netlify.app/new-patients/)
-- [Contact and appointment request](https://millforestdental-semi-live.netlify.app/contact/)
-- [Patient forms](https://millforestdental-semi-live.netlify.app/patient-forms/)
-- [Testimonials](https://millforestdental-semi-live.netlify.app/testimonials/)
+- [Home](https://millforestdental.netlify.app/)
+- [Services](https://millforestdental.netlify.app/services/)
+- [Our practice and doctors](https://millforestdental.netlify.app/about/)
+- [Meet the team](https://millforestdental.netlify.app/meet-the-team/)
+- [New patients and financial information](https://millforestdental.netlify.app/new-patients/)
+- [Contact and appointment request](https://millforestdental.netlify.app/contact/)
+- [Patient forms](https://millforestdental.netlify.app/patient-forms/)
+- [Testimonials](https://millforestdental.netlify.app/testimonials/)
