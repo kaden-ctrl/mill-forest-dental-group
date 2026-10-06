@@ -24,7 +24,8 @@
 - General: fillings, crowns, bridges, dentures, extractions, root canals, sedation, pediatric care
 - Cosmetic: teeth whitening, veneers, bonding, clear aligners (SureSmile)
 - Periodontics: gum disease treatment, scaling and root planing, periodontal surgery
-- Technology: digital X-rays, intraoral camera, Trios 3D scanner, CBCT 3D imaging, dental laser, DIAGNOdent
+- Technology: digital X-rays, intraoral camera, Trios 3D scanner, CBCT 3D imaging, DIAGNOdent
+- Laser dentistry: Laser Bacterial Reduction (LBR) and Laser-Assisted Periodontal Therapy (LAPT) for gum health, soft tissue laser treatment for cold sores and canker sores, laser desensitization for sensitive teeth, photobiomodulation (PBM) therapy for healing, TMJ and jaw pain
 
 ## Pages
 - [Home](https://millforestdental-semi-live.netlify.app/)
