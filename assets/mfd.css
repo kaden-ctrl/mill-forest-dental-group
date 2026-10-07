@@ -452,10 +452,10 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 @media (max-width:620px){.pp-note{padding:26px 24px}}
 
 /* ---- video with text wrapping around it ---- */
-.vid-phone{float:left;width:200px;margin:4px 28px 16px 0}
+.vid-phone{float:left;width:140px;margin:4px 24px 14px 0}
 .vid-phone video{width:100%;aspect-ratio:9/16;height:auto;display:block;border-radius:18px;background:#0b0b0b;border:1px solid var(--line)}
-.vid-phone figcaption{margin-top:10px;font-size:14px;color:var(--muted);line-height:1.5}
+.vid-phone figcaption{margin-top:8px;font-size:12.5px;color:var(--muted);line-height:1.45}
 .prose h2{clear:both}
 .vid-phone ~ ul{overflow:hidden;margin-left:0;padding-left:20px}
 .faq-list{clear:both}
-@media (max-width:760px){.vid-phone{float:none;width:100%;max-width:220px;margin:4px auto 20px}}
+@media (max-width:760px){.vid-phone{float:left;width:130px;margin:4px 18px 12px 0}}
