@@ -1,0 +1,22 @@
+{
+  "name": "site-verification",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "playwright test",
+    "verify:seo": "playwright test seo --project=desktop-1280",
+    "verify:a11y": "playwright test accessibility --project=desktop-1280",
+    "verify:forms": "playwright test forms --project=desktop-1280",
+    "verify:design": "playwright test design --project=desktop-1280",
+    "verify:links": "playwright test links --project=desktop-1280",
+    "verify:console": "playwright test console --project=desktop-1280",
+    "verify:responsive": "playwright test responsive",
+    "verify:mobile": "playwright test responsive --project=mobile-375 --project=mobile-390 --project=mobile-414",
+    "verify:safari": "WEBKIT=1 playwright test --project=mobile-safari",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0"
+  }
+}
