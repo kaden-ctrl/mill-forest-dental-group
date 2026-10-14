@@ -1,3 +1,7 @@
+# build notes are in the repo but must never be served
+/CLAUDE.md /404.html 404
+/.claude/* /404.html 404
+
 /carivu/ /dental-laser/ 301!
 /carivu /dental-laser/ 301!
 /meet-kenny-hasson-dds/ /about/#doctors 301!
