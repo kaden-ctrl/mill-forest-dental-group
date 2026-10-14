@@ -70,3 +70,34 @@ after `git push` will show stale content.
   photo from the practice.
 - `/dental-laser/` shows a generic diode laser, not the practice's actual
   Gemini EVO. Same situation.
+
+## Website Build Standards: accepted deviations
+
+Audited against `website-build-standards` on 2026-10-14. These fail the standard
+deliberately. Do not "fix" them without asking the client.
+
+- **Pill buttons.** `.btn` uses `border-radius:999px`; the standard requires 4 to 8px.
+  This is the approved visual identity. The other `999px` values are the arch photo
+  frames, which are the site's signature shape, not buttons.
+- **Four banned phrases, seven instances.** "cutting-edge" (cosmetic-dentistry),
+  "state-of-the-art" (what-sets-us-apart, and Dr. Tutt's bio), "revolutionary"
+  (diagnodent), "when it comes to" (common-procedures, intraoral-camera, sealants).
+  The Tutt instance is inside client-supplied verbatim copy and cannot be changed.
+  The rest were carried over from the client's previous site and the client chose to
+  keep them.
+- **One em dash**, in Dr. Hermstein's bio. Client-supplied verbatim copy. The
+  no-em-dash rule does not override it.
+- **`favicon.svg` wraps a raster.** No vector of the crest exists; the only `logo.svg`
+  on the old site was the vendor's own logo. Replace if the client ever supplies the
+  original logo artwork.
+- **The scanner's dash and focus-outline findings are false positives.** The dashes it
+  flags are non-breaking hyphens in "Same-day" and a CSS `content:"-"` on the mobile
+  accordion. Focus outlines are reset but replaced by
+  `:focus-visible{outline:3px solid #A96F15}`.
+
+### Still outstanding
+
+- Legal pages carry `<mark class="tbd">[CLIENT TO CONFIRM]</mark>` on the legal entity
+  name, the 24-month form retention period, and the court venue. They also need
+  attorney review before launch, and the client must be told that in writing.
+- Not yet run: axe, pa11y, linkinator, Lighthouse, and the 8-case form test.
