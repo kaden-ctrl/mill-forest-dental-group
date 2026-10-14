@@ -49,4 +49,6 @@
   <url><loc>https://millforestdental.netlify.app/vatech-cbct/</loc><priority>0.6</priority></url>
   <url><loc>https://millforestdental.netlify.app/veneers/</loc><priority>0.6</priority></url>
   <url><loc>https://millforestdental.netlify.app/what-sets-us-apart/</loc><priority>0.6</priority></url>
+  <url><loc>https://millforestdental.netlify.app/privacy/</loc><priority>0.3</priority></url>
+  <url><loc>https://millforestdental.netlify.app/terms/</loc><priority>0.3</priority></url>
 </urlset>
