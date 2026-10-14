@@ -104,7 +104,23 @@ deliberately. Do not "fix" them without asking the client.
 
 ### Still outstanding
 
-- Legal pages carry `<mark class="tbd">[CLIENT TO CONFIRM]</mark>` on the legal entity
-  name, the 24-month form retention period, and the court venue. They also need
-  attorney review before launch, and the client must be told that in writing.
-- Not yet run: axe, pa11y, linkinator, Lighthouse, and the 8-case form test.
+- **Photos.** `/diagnodent/` and `/dental-laser/` show generic stock, not the practice's
+  own DIAGNOdent and Gemini EVO. Client has chosen to leave these for now.
+- **DNS cutover.** Still pointing at Sesame's host. When the live domain serves this
+  site, run `./scripts/cutover-domain.sh --check`, then without the flag. It refuses to
+  run until https://millforestdental.com returns 200. Then submit the sitemap in
+  Search Console.
+- **No DKIM or DMARC** on millforestdental.com. Deferred by the client.
+
+### Deliberately not run
+
+The standards list five checks that need the site exercised rather than inspected:
+axe, pa11y, linkinator, Lighthouse, and the eight-case form test. The client decided
+to skip these. Nothing in the handoff may claim the site is accessible, fast, or that
+form delivery is confirmed, because none of that has been measured.
+
+### Legal pages
+
+Entity name, the 24-month form retention period, Texas governing law, and Harris
+County venue were approved by the client on 2026-10-14. **Attorney review has still
+not happened** and the client must be told so in writing before launch.

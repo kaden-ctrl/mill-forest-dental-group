@@ -465,7 +465,6 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .prose th,.prose td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .prose th{font-weight:700;color:var(--spruce);border-bottom:2px solid var(--spruce)}
 .prose table a{word-break:break-word}
-mark.tbd{background:#FDF0CE;color:#6B4C00;padding:1px 7px;border-radius:4px;font-size:.88em;font-weight:700;white-space:nowrap}
 .flegal a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (max-width:620px){.prose table,.prose thead,.prose tbody,.prose tr,.prose th,.prose td{display:block}
 .prose thead{display:none}
