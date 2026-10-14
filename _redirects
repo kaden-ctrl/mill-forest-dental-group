@@ -1,6 +1,8 @@
 # build notes are in the repo but must never be served
 /CLAUDE.md /404.html 404!
 /.claude/* /404.html 404!
+/scripts/* /404.html 404!
+/netlify.toml /404.html 404!
 
 /carivu/ /dental-laser/ 301!
 /carivu /dental-laser/ 301!

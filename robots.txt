@@ -31,5 +31,6 @@ Allow: /
 User-agent: *
 Disallow: /CLAUDE.md
 Disallow: /.claude/
+Disallow: /scripts/
 
 Sitemap: https://millforestdental.netlify.app/sitemap.xml
