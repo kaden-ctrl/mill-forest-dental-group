@@ -11,6 +11,14 @@ Set the domain once before working through the commands:
 D=clientdomain.com
 ```
 
+## Project setup, before any of this
+
+First time on a project, follow `staging-workflow.md`. It covers inventorying open
+pull requests before the workflow changes orphan them, committing the rule to the
+default branch, branching staging from the same commit, enabling Netlify branch
+deploys, bootstrapping with an empty commit, and excluding internal files from the
+published site. Skip it where a working staging preview already exists.
+
 ## Legal and data
 
 **[1] Privacy policy** at `/privacy`
@@ -116,11 +124,26 @@ done
 All 200. Then open the site in a real browser and confirm the icon shows in the tab.
 Hard refresh, favicons cache hard.
 
+**Internal files not publicly served** (not in the original 24, added because it is
+a real exposure). `CLAUDE.md` ships with the site and is readable at `/CLAUDE.md` on
+any static host, along with `README.md`, `.env`, `netlify.toml`, and `package.json`
+when the publish directory is the repo root.
+```bash
+for p in /CLAUDE.md /README.md /.env /netlify.toml /package.json /.git/config; do
+  printf "%s %s\n" "$(curl -so /dev/null -w '%{http_code}' https://$D$p)" "$p"
+done
+```
+Every line must read 404 or 403. Fix in `staging-workflow.md`, section 6.
+Also covered by `npm run verify:seo`.
+
 **[6] Custom 404**
-Markup in `site-files.md`. Must return status 404, not 200.
+Markup in `site-files.md`. Must return status 404, not 200, must link back into the
+site, and must not expose server paths or stack traces.
 ```bash
 curl -so /dev/null -w "%{http_code}\n" https://$D/definitely-not-a-real-page
 ```
+`verify:seo` asserts the status, that the page links home, and that it leaks no
+internal detail.
 
 ## Accessibility
 
@@ -246,6 +269,11 @@ CLS, TBT. Page weight. Actual values from the commands, not estimates.
 
 **Removed content.** Every claim, number, award, or section deleted for lack of a
 source, listed so the client can supply the real version.
+
+**Known-failing checks.** Any check that fails and is being accepted, with the
+reason. Put these in `CLAUDE.md` under "Before pushing" as well as the report.
+Without the reason recorded, the next session treats a deliberate tradeoff as a bug
+and "fixes" it.
 
 **Scanner and suite output.** The final `scan-copy.sh` result and the
 `npm run verify` summary. If anything still fails, list it and say why it is

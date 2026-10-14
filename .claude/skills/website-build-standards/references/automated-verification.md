@@ -25,6 +25,7 @@ leaves your `site.config.ts` alone.
 | `analyticsId` | the GA4 measurement ID, or `''` to skip the analytics tests |
 | `design` | radius ceiling, tap target and input font minimums, font family cap |
 | `rootFiles` | files that must exist at the root |
+| `privatePaths` | files that must NOT be publicly reachable |
 | `skipLinkHosts` | external hosts that block crawlers |
 
 ## Run
@@ -58,7 +59,12 @@ canonical presence and self-reference, single h1, complete Open Graph set,
 dimensions, `rel=noopener`, root files returning 200, 404 returning status 404,
 robots.txt referencing the sitemap, every sitemap URL returning 200, sitemap
 excluding thank-you and error pages, JSON-LD present and parseable with an
-Organization or LocalBusiness type.
+Organization or LocalBusiness type. Also that internal files are not publicly
+reachable (`CLAUDE.md`, `README.md`, `.env`, `netlify.toml`, `package.json`,
+`.git/config`, configurable via `privatePaths`), that the 404 page links back into
+the site rather than dead-ending, and that it exposes no server paths or stack
+traces. The exposure test fingerprints the not-found body first, so a host that
+soft-404s reports one root cause instead of one finding per path.
 
 **`responsive.spec.ts`** Runs in seven viewports. Horizontal overflow, naming the
 offending elements and their measured widths. Tap target sizes, measuring a labelled

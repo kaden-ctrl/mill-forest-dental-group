@@ -135,9 +135,63 @@ test.describe('Site-level SEO', () => {
     expect(failures, `missing root files: ${failures.join(', ')}`).toHaveLength(0)
   })
 
+  test('internal files are not publicly reachable', async ({ request }) => {
+    // A host that soft-404s returns 200 for everything, which would report every
+    // private path as exposed even when the file does not exist. Fingerprint the
+    // not-found response first and discount anything that matches it. The soft-404
+    // itself is a separate test, so the root cause is still reported once.
+    const probe = await request.get('/definitely-absent-probe-7c21', { failOnStatusCode: false })
+    const notFoundBody = probe.status() === 200
+      ? (await probe.text()).slice(0, 400).replace(/\s+/g, ' ')
+      : null
+
+    const exposed: string[] = []
+    for (const path of site.privatePaths) {
+      const r = await request.get(path, { failOnStatusCode: false })
+      if (r.status() !== 200) continue
+      const full = (await r.text()).replace(/\s+/g, ' ')
+      if (notFoundBody && full.slice(0, 400) === notFoundBody) continue   // soft 404
+      exposed.push(`${path} -> 200  "${full.slice(0, 120)}..."`)
+    }
+    expect(
+      exposed,
+      `these internal files are served publicly:\n  ${exposed.join('\n  ')}\n` +
+      `A static host serves everything in the publish directory. Exclude them, or ` +
+      `add forced 404 redirects. See staging-workflow.md, section 6.`
+    ).toHaveLength(0)
+  })
+
+  test('the 404 page itself does not leak internal paths', async ({ page }) => {
+    const res = await page.goto('/this-page-definitely-does-not-exist-9f3a')
+    const body = (await page.locator('body').innerText()).toLowerCase()
+    const leaks = ['/users/', 'node_modules', '.claude', 'traceback', 'at /', 'stack trace']
+      .filter(l => body.includes(l))
+    expect(
+      leaks,
+      `the 404 page exposes internal detail: ${leaks.join(', ')}. ` +
+      `Serve a branded 404, not a server or framework error page.`
+    ).toHaveLength(0)
+  })
+
   test('404 page returns status 404, not 200', async ({ request }) => {
     const r = await request.get('/this-page-definitely-does-not-exist-9f3a')
     expect(r.status(), 'a soft 404 returning 200 gets the error page indexed').toBe(404)
+  })
+
+  test('404 page routes the visitor back into the site', async ({ page }) => {
+    await page.goto('/this-page-definitely-does-not-exist-9f3a')
+    const links = await page.locator('a[href]').evaluateAll(els =>
+      els.map(e => (e as HTMLAnchorElement).getAttribute('href') || '')
+         .filter(h => h && !h.startsWith('#') && !h.startsWith('mailto:') && !h.startsWith('tel:'))
+    )
+    expect(
+      links.length,
+      'the 404 page has no links. A dead end loses the visitor instead of recovering them.'
+    ).toBeGreaterThan(0)
+    expect(
+      links.some(h => h === '/' || h.endsWith('//') || /^https?:\/\/[^/]+\/?$/.test(h)),
+      `the 404 page does not link home. Links found: ${links.slice(0, 8).join(', ')}`
+    ).toBe(true)
   })
 
   test('robots.txt references the sitemap', async ({ request }) => {

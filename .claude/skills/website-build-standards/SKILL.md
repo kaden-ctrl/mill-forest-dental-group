@@ -24,12 +24,20 @@ not verification. Run the command and record the output.
 | `references/legal-pages.md` | Privacy policy and terms templates with tokens, cookie consent implementation, footer |
 | `references/copy-and-design-rules.md` | The banned phrase list, hero and CTA rewrites, design specifics with the CSS to avoid |
 | `references/automated-verification.md` | The Playwright suite: install, configure, run, what each spec covers, and what it does not |
+| `references/staging-workflow.md` | One-time project setup: staging branch, Netlify branch deploys, CLAUDE.md, keeping internal files off the public site |
 | `scripts/scan-copy.sh` | Static scanner. Greps source for every banned phrase and prohibited pattern. Exit 0 required before launch. |
 | `scripts/install-playwright.sh` | Installs the Playwright verification suite into a project |
 | `templates/playwright/` | The suite itself: config plus seven spec files |
 | `scripts/test-scanner.sh`, `scripts/test-playwright.sh` | Regression tests for the scanner and the suite, run against compliant and deliberately broken fixtures |
 
 ## Workflow
+
+**0. Project setup.** First time on a project, follow
+`references/staging-workflow.md`: inventory open pull requests before changing the
+workflow, commit the rule to the default branch, branch staging from that same
+commit, enable Netlify branch deploys, bootstrap with an empty commit, and exclude
+`CLAUDE.md` and other internal files from the published site. Skip this on a project
+that already has a staging branch with a working preview URL.
 
 **1. Intake.** Collect before writing anything: business legal name, address, phone,
 support email, domain, logo files, brand hex colors, jurisdiction for legal pages,
@@ -109,5 +117,11 @@ at a whiteboard.
 - Collect only data the business will use. Default to name, email, message.
 - Report measured Lighthouse numbers. Never claim a site is fast without running it.
 - `scan-copy.sh` must exit 0 and `npm run verify` must pass before launch.
+- `CLAUDE.md` ships with the site and is readable at `/CLAUDE.md` on a static host.
+  Keep infrastructure details out of the public build. `verify:seo` asserts this.
+- Record known-failing checks and why they are accepted, in `CLAUDE.md`. Otherwise
+  the next session "fixes" a deliberate tradeoff.
+- Re-read every setting written through an API. A success response is not
+  confirmation that the value was stored.
 - A passing suite is not a verified site. Email delivery, Lighthouse, and real device
   behaviour are not covered by it. Say so in the handoff rather than implying they are.

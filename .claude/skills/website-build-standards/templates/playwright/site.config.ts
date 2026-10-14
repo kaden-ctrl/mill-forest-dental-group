@@ -44,6 +44,21 @@ export default {
     'linkedin.com', 'twitter.com', 'x.com', 'facebook.com', 'instagram.com',
   ],
 
+  // Files that must NOT be publicly reachable. A static host serves whatever is in
+  // the publish directory, so build notes and config end up readable unless excluded.
+  // CLAUDE.md is the usual offender: it ships with the site and names infrastructure.
+  privatePaths: [
+    '/CLAUDE.md',
+    '/README.md',
+    '/.claude/skills/website-build-standards/SKILL.md',
+    '/.env',
+    '/.env.local',
+    '/netlify.toml',
+    '/package.json',
+    '/.git/config',
+    '/verification/site.config.ts',
+  ],
+
   // Root files that must exist and return 200.
   rootFiles: [
     '/robots.txt',
