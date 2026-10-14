@@ -95,6 +95,13 @@ deliberately. Do not "fix" them without asking the client.
   accordion. Focus outlines are reset but replaced by
   `:focus-visible{outline:3px solid #A96F15}`.
 
+- **`scan-copy.sh` reports 3 banned-phrase hits inside `CLAUDE.md` itself**, because
+  this file documents which phrases exist on the site. Those are documentation, not
+  site copy, and `CLAUDE.md` is not served. Site copy holds steady at 8.
+- **`404.html` and `/thanks/` have no canonical tag.** A canonical on an error page or
+  a form thank-you page is wrong, so the scanner's finding there is declined. Both now
+  carry meta descriptions, and `/thanks/` is `noindex, follow`.
+
 ### Still outstanding
 
 - Legal pages carry `<mark class="tbd">[CLIENT TO CONFIRM]</mark>` on the legal entity
