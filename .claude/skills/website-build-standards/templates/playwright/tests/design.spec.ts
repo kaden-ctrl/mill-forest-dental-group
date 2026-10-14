@@ -134,6 +134,45 @@ for (const path of site.pages) {
       ).toBeLessThanOrEqual(site.design.maxFontFamilies)
     })
 
+    test('footer carries the agency credit, nofollowed', async ({ page }) => {
+      test.skip(!site.credit.required, 'credit not required for this project')
+      await page.goto(path)
+
+      const link = page.locator(`footer a[href="${site.credit.href}"]`)
+      await expect(
+        link,
+        `${path}: no footer link to ${site.credit.href}. New builds carry the ` +
+        `agency credit. Set credit.required to false if this client declined it.`
+      ).toHaveCount(1)
+
+      const rel = (await link.getAttribute('rel')) || ''
+      expect(
+        rel,
+        `${path}: the credit link has rel="${rel}". It needs nofollow. An identical ` +
+        `sitewide footer link across a portfolio is the pattern Google's link spam ` +
+        `guidance names, and the credit is for referral traffic, not PageRank.`
+      ).toContain('nofollow')
+      expect(rel, `${path}: credit link opening in a new tab needs noopener`).toContain('noopener')
+
+      const context = (await page.locator('footer').innerText()).toLowerCase()
+      expect(
+        site.credit.text.test(context),
+        `${path}: the footer links to ${site.credit.name} but does not say ` +
+        `"Website by". "Created by" is ambiguous about what was created.`
+      ).toBe(true)
+    })
+
+    test('the agency credit is not repeated in the navigation', async ({ page }) => {
+      test.skip(!site.credit.required, 'credit not required for this project')
+      await page.goto(path)
+      const inNav = await page.locator(`header a[href="${site.credit.href}"], nav a[href="${site.credit.href}"]`).count()
+      expect(
+        inNav,
+        `${path}: the agency credit appears in the navigation. Footer only, so it ` +
+        `does not compete with the client's own branding.`
+      ).toBe(0)
+    })
+
     test('no AI tool badge or build credit', async ({ page }) => {
       await page.goto(path)
       const text = (await page.locator('body').innerText()).toLowerCase()

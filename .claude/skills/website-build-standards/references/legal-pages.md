@@ -276,10 +276,36 @@ Every page. All three legal links present.
     <a href="tel:+1{{10_DIGITS}}">{{FORMATTED_PHONE}}</a><br>
     <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
   </address>
+  <p class="footer__credit">
+    Website by <a href="https://duogroup.com" target="_blank"
+    rel="nofollow noopener">Duo Group</a>
+  </p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 ```
 
-The footer contains the client's copyright, legal links, and contact details. Nothing
-else. No build credit, no AI badge, no "website by" link unless the client agreed to
-it in writing.
+The footer contains the client's copyright, legal links, contact details, and the
+agency build credit. Nothing else. No AI badge, no tool watermark.
+
+**Agency credit, required on new builds as of 2026-10-14.** Existing sites are not
+retrofitted, so set `credit.required` to `false` in `verification/site.config.ts` for
+a site that launched before that date, or where the client declined it.
+
+Four rules:
+
+- **Wording is "Website by", not "Created by".** "Created by" is ambiguous about what
+  was created and can read as a claim about the business or its content.
+- **`rel="nofollow noopener"` is required.** An identical sitewide footer link across
+  a portfolio of sites under one agency's control is the pattern Google's link spam
+  guidance names as an example of a link scheme. The credit exists for referral
+  traffic and credibility, not PageRank, so `nofollow` removes the risk at no cost.
+- **Written client consent.** It belongs in the proposal or SOW, not discovered at
+  launch. Some clients decline, and that is their call.
+- **Footer only, never the navigation.** De-emphasized, below the client's own
+  copyright, so it does not compete with their branding.
+
+Keep it visually quiet: smaller than body text, the same muted color as the
+copyright line, no logo, no badge graphic.
+
+`verify:design` asserts the link exists in the footer, carries `nofollow` and
+`noopener`, uses the "Website by" wording, and does not also appear in the nav.

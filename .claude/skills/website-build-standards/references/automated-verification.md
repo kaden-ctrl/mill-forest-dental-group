@@ -26,6 +26,7 @@ leaves your `site.config.ts` alone.
 | `design` | radius ceiling, tap target and input font minimums, font family cap |
 | `rootFiles` | files that must exist at the root |
 | `privatePaths` | files that must NOT be publicly reachable |
+| `credit` | the agency footer credit; set `required: false` on pre-existing or opted-out sites |
 | `skipLinkHosts` | external hosts that block crawlers |
 
 ## Run
@@ -94,7 +95,9 @@ page. Analytics tag present on every page, and not firing before consent.
 source: pill radius measured against element height, purple gradients detected by
 parsing computed `background-image` colors, emoji in rendered text, custom cursors,
 numbers that change after load, font family count, AI build credits, unsupported
-numeric claims, and a vague h1.
+numeric claims, and a vague h1. Also the footer agency credit: present, nofollowed,
+worded "Website by", and absent from the nav. Gated on `credit.required`, which is
+`false` for sites that launched before the credit became standard.
 
 `design.spec.ts` and `scan-copy.sh` overlap deliberately. The scanner greps source
 files and catches things before the site runs. The spec checks what the browser

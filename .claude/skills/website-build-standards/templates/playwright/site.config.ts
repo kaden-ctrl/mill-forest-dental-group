@@ -31,6 +31,17 @@ export default {
   // Analytics measurement ID. Empty string skips the analytics test.
   analyticsId: process.env.GA_ID || '',
 
+  // Agency build credit in the footer. Required on new builds as of 2026-10-14.
+  // Set `required: false` for a site that launched before that and never carried
+  // it, since the standard is forward-looking and existing sites are not retrofitted.
+  // Also set it false where the client declined the credit in writing.
+  credit: {
+    required: true,
+    text: /website by/i,
+    href: 'https://duogroup.com',
+    name: 'Duo Group',
+  },
+
   // Design constraints from the standards.
   design: {
     maxBorderRadiusPx: 8,            // pill buttons banned

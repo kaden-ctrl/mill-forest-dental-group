@@ -97,7 +97,7 @@ you verified from what you only built.
 | AI-generated images (heroes, illustrations, headshots) | The client's real photos. Absent those, licensed stock, or a text-and-color layout with no imagery. Flag the photo gap. |
 | Em dashes in copy | A comma, colon, period, or parentheses. Restructure the sentence if needed. |
 | AI copy ("in today's fast-paced world", "it's not just X, it's Y", "seamlessly", "robust", "leverage", "elevate", "unlock", "delve", uniform three-sentence paragraphs) | Short declarative sentences. Concrete nouns. The words the client used about their own business. Vary sentence length. Full banned list in `references/copy-and-design-rules.md`. |
-| Any "made with AI", "Built with Claude", or AI tool badge | Footer holds the client's copyright, legal links, and contact. Nothing else. |
+| Any "made with AI", "Built with Claude", or AI tool badge | Footer holds the client's copyright, legal links, contact, and the agency credit. Nothing else. An AI badge says nobody was accountable; an agency credit says a firm stands behind the work. |
 
 ### Also avoid
 
@@ -117,6 +117,11 @@ at a whiteboard.
 - Collect only data the business will use. Default to name, email, message.
 - Report measured Lighthouse numbers. Never claim a site is fast without running it.
 - `scan-copy.sh` must exit 0 and `npm run verify` must pass before launch.
+- New builds carry `Website by <a rel="nofollow noopener">Duo Group</a>` in the
+  footer, with written client consent. Existing sites are not retrofitted. The
+  `nofollow` is required: an identical sitewide footer link across a portfolio is
+  the pattern Google's link spam guidance names, and a credit is for referral
+  traffic, not PageRank. Markup in `legal-pages.md`, enforced by `verify:design`.
 - `CLAUDE.md` ships with the site and is readable at `/CLAUDE.md` on a static host.
   Keep infrastructure details out of the public build. `verify:seo` asserts this.
 - Record known-failing checks and why they are accepted, in `CLAUDE.md`. Otherwise
