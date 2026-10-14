@@ -1,0 +1,18 @@
+# Keep non-production deploys out of search results.
+#
+# Netlify adds `X-Robots-Tag: noindex` to deploy previews and to OLD branch
+# deploys, but NOT to the most recent deploy of each branch. That means the
+# staging preview is crawlable by default, and it can compete with production
+# in search or surface stale copy to anyone who finds the URL.
+#
+# Headers cannot be scoped per deploy context in this file, so each
+# non-production context appends the rule to `_headers` at build time instead.
+#
+# Production deliberately has no build command here, so `main` is unaffected
+# and keeps publishing the repo root exactly as before.
+
+[context.branch-deploy]
+  command = 'printf "\n/*\n  X-Robots-Tag: noindex, nofollow\n" >> _headers'
+
+[context.deploy-preview]
+  command = 'printf "\n/*\n  X-Robots-Tag: noindex, nofollow\n" >> _headers'
