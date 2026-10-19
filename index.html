@@ -162,7 +162,8 @@ section{position:relative}
 
 /* ---- SERVICES directory (ruled list) ---- */
 .dir{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
-.drow{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;padding:26px 6px;border-top:1px solid var(--line);cursor:pointer;transition:padding .3s,background .3s;position:relative}
+.drow{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;padding:26px 6px;border-top:1px solid var(--line);cursor:pointer;transition:padding .3s,background .3s;position:relative;color:inherit;text-decoration:none}
+.drow:focus-visible{outline:3px solid #A96F15;outline-offset:2px;border-radius:4px}
 .drow:hover{padding-left:16px;padding-right:16px;background:linear-gradient(90deg,rgba(231,168,58,.08),rgba(231,168,58,0))}
 .drow h3{font-size:22px;font-weight:700}
 .drow p{font-size:14.5px;color:var(--muted);margin-top:4px;max-width:34ch}
@@ -548,30 +549,30 @@ section[id],div[id]{scroll-margin-top:120px}
       <p class="desc">Preventive, restorative, cosmetic, and orthodontic dentistry for the whole family, so you rarely need a referral elsewhere.</p>
     </div>
     <div class="dir">
-      <div class="drow reveal">
+      <a class="drow reveal" href="/services/#preventive">
         <div><h3>Family &amp; general</h3><p>Cleanings, exams, fillings, and gum care for every age.</p></div>
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </div>
-      <div class="drow reveal" data-d="1">
+      </a>
+      <a class="drow reveal" href="/cosmetic-dentistry/" data-d="1">
         <div><h3>Cosmetic &amp; whitening</h3><p>Whitening, bonding, and natural‑looking veneers.</p></div>
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </div>
-      <div class="drow reveal">
+      </a>
+      <a class="drow reveal" href="/clear-aligners/">
         <div><h3>Clear aligners</h3><p>Discreet, nearly invisible straightening for teens and adults.</p></div>
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </div>
-      <div class="drow reveal" data-d="1">
+      </a>
+      <a class="drow reveal" href="/services/#restorative" data-d="1">
         <div><h3>Dental implants</h3><p>Durable, natural‑feeling tooth replacement.</p></div>
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </div>
-      <div class="drow reveal">
+      </a>
+      <a class="drow reveal" href="/services/#emergency">
         <div><h3>Emergency dentistry</h3><p>Same‑day relief for pain, breaks, and swelling.</p></div>
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </div>
-      <div class="drow reveal" data-d="1">
+      </a>
+      <a class="drow reveal" href="/sedation/" data-d="1">
         <div><h3>Kids &amp; anxious patients</h3><p>Playful, patient care plus sedation options.</p></div>
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-      </div>
+      </a>
     </div>
   </div>
 </section>
