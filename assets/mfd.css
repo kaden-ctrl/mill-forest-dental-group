@@ -423,6 +423,14 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .form-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
 
 /* ---- faq section on article pages ---- */
+/* ---- in-content links ----
+   Most prose links were rendering in the exact body text colour with no
+   underline, so they were invisible as links. A few were hand-styled inline.
+   This makes every non-button link in the article body consistent. */
+.prose a:not(.btn){color:inherit;font-weight:700;text-decoration:underline;
+  text-decoration-color:var(--marigold);text-decoration-thickness:2px;
+  text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+.prose a:not(.btn):hover{color:var(--spruce);text-decoration-color:var(--spruce)}
 /* ---- Common Questions: lift the block out of the article body ----
    It previously used the same hairline rule, size and weight as every other
    section heading, so it read as just more body content. A panel plus a
