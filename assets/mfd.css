@@ -423,7 +423,21 @@ a.chip:hover{background:var(--paper2);border-color:var(--fern);transform:transla
 .form-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
 
 /* ---- faq section on article pages ---- */
-.prose h2#faq{margin-top:52px}
+/* ---- Common Questions: lift the block out of the article body ----
+   It previously used the same hairline rule, size and weight as every other
+   section heading, so it read as just more body content. A panel plus a
+   tighter question size restores the hierarchy, no markup changes needed. */
+.prose h2#faq{border-top:none;margin:64px 0 0;padding:30px 32px 4px;
+  background:var(--paper2);border-radius:20px 20px 0 0}
+.prose h2#faq + .faq-list{background:var(--paper2);border-top:none;margin:0;
+  padding:0 32px 8px;border-radius:0 0 20px 20px}
+.prose h2#faq + .faq-list details.q:last-child{border-bottom:none}
+.prose h2#faq + .faq-list details.q summary{font-size:clamp(17.5px,1.8vw,20px);padding:22px 0}
+.prose h2#faq + .faq-list details.q .a{padding:0 0 24px}
+@media (max-width:620px){
+  .prose h2#faq{padding:24px 20px 4px}
+  .prose h2#faq + .faq-list{padding:0 20px 6px}
+}
 @media (max-width:1250px){.prac-grid{grid-template-columns:1fr!important}.prac-photo.main{max-width:760px}}
 
 /* ---- educational diagrams ---- */
