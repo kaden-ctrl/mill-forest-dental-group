@@ -215,7 +215,7 @@ details.q .a{padding:0 4px 30px;max-width:74ch;font-size:16.5px;color:var(--mute
 .vr p,.vr .hh div{font-size:16.5px;color:var(--ink)}
 .vr .hh div{display:flex;justify-content:space-between;gap:32px;max-width:340px;padding:7px 0;border-bottom:1px solid var(--line-soft)}
 .vr .hh div:last-child{border-bottom:none}
-.vr .hh .today b{display:inline;letter-spacing:0;text-transform:none;color:var(--fern);font-size:16.5px}
+.vr 
 .vr .hh span{color:var(--muted)}
 .visit-info .btns{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
 .visit-map{position:relative;background:var(--paper2);min-height:460px}
